@@ -36,6 +36,7 @@ jobs:
           - sqlite3
         version:
           - v60
+          - v65
         include:
           - interpreter: python3
           - interpreter: python
@@ -43,6 +44,10 @@ jobs:
         exclude:
           - container: debian12
             version: v62
+          - container: centos7
+            version: v65
+          - container: debian10
+            version: v65
     steps:
       - name: Check out code
         uses: actions/checkout@v4

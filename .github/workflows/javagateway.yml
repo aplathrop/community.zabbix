@@ -30,10 +30,16 @@ jobs:
           - debian10
         version:
           - v60
+          - v65
         include:
           - interpreter: python3
           - interpreter: python
             container: centos7
+        exclude:
+          - container: debian10
+            version: v65
+          - container: centos7
+            version: v65
         collection_role:
           - zabbix_javagateway
     steps:

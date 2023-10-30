@@ -75,15 +75,15 @@ ansible-galaxy collection install community.postgresql
 
 See the following list of supported Operating systems with the Zabbix releases:
 
-| Zabbix              | 6.0 |
-|---------------------|-----|
-| Red Hat Fam 9       |  V  |
-| Red Hat Fam 8       |  V  |
-| Ubuntu 22.04 jammy  |  V  |
-| Ubuntu 20.04 focal  |  V  |
-| Debian 12 bookworm  |  V  |
-| Debian 11 bullseye  |  V  |
-| Debian 10 buster    |  V  |
+| Zabbix              | 6.0 | 7.0 |
+|---------------------|-----|-----|
+| Red Hat Fam 9       |  V  |  V  |
+| Red Hat Fam 8       |  V  |  V  |
+| Ubuntu 22.04 jammy  |  V  |  V  |
+| Ubuntu 20.04 focal  |  V  |  V  |
+| Debian 12 bookworm  |  V  |  V  |
+| Debian 11 bullseye  |  V  |  V  |
+| Debian 10 buster    |  V  |     |
 
 # Installation
 
@@ -337,6 +337,7 @@ The following table lists all variables that are exposed to modify the configura
 |SSHKeyLocation | zabbix_server_sshkeylocation | |  |
 |SSLCALocation | zabbix_server_sslcalocation | |  |
 |SSLCertLocation | zabbix_server_sslcertlocation | ${datadir}/zabbix/ssl/certs |  |
+|StartAgentPollers | zabbix_server_startagentpollers | | |
 |SSLKeyLocation | zabbix_server_sslkeylocation | ${datadir}/zabbix/ssl/keys |  |
 |StartAlerters | zabbix_server_startalerters | |  |
 |StartConnectors | zabbix_server_connectors | | Version 6.4 or later |
@@ -344,7 +345,9 @@ The following table lists all variables that are exposed to modify the configura
 |StartDiscoverers | zabbix_server_startdiscoverers | 1 |  |
 |StartEscalators | zabbix_server_startescalators | 1 |  |
 |StartHistoryPollers | zabbix_server_starthistorypollers | |  |
+|StartHTTPAgentPollers | zabbix_server_starthttpagentpollers | | |
 |StartHTTPPollers | zabbix_server_starthttppollers | 1 |  |
+|StartHTTPAgentPollers | zabbix_server_starthttpagentpollers | | |
 |StartIPMIPollers | zabbix_server_startipmipollers | 0 |  |
 |StartJavaPollers | zabbix_server_startjavapollers | 0 |  |
 |StartLLDProcessors | zabbix_server_startlldprocessors | |  |
@@ -355,6 +358,7 @@ The following table lists all variables that are exposed to modify the configura
 |StartPreprocessors | zabbix_server_startpreprocessors | |  |
 |StartProxyPollers | zabbix_server_startproxypollers | |  |
 |StartReportWriters | zabbix_server_startreportwriters | 0 |  |
+|StartSNMMPAgentPollers | zabbix_server_startsnmpagentpollers | | |
 |StartSNMPTrapper | zabbix_server_startsnmptrapper | 0 |  |
 |StartTimers | zabbix_server_starttimers | 1 |  |
 |StartTrappers | zabbix_server_starttrappers | 5 |  |
